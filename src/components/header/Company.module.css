@@ -1,0 +1,17 @@
+/* .Company{
+        transform: translate(100%,5%);
+} */
+.Company span{
+    display: block;
+}
+.Company span a{
+    display: inline-flex;
+    gap:1rem;
+    padding:5px 10px;
+    margin: 5px;
+}
+@media screen and (max-width:600px){
+    .Company{
+        transform: translate(0,0);
+    }
+}

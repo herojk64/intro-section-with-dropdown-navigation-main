@@ -1,0 +1,106 @@
+.Heading{
+    padding:.5rem 1.5rem;
+    display:flex;
+    gap:1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+ 
+}
+.HeaderNav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+}
+.HeaderNav nav{
+    width: 50%;
+}
+
+.HeaderNav nav ol{
+    display: flex;
+    gap:.5rem;
+}
+
+.HeaderNav nav ol li{
+    color:var(--primary-MediumGray);
+    padding:1rem 0.5rem;
+    margin:0 0.5rem;
+}
+.HeaderNav nav ol li:hover{
+    color: var(--primary-AlmostBlack);
+}
+
+.HeaderNav nav ol li a{
+    color:var(--primary-MediumGray);
+    cursor: pointer;
+}
+.HeaderNav nav ol li a:hover{
+    color: var(--primary-AlmostBlack);
+}
+
+.MenuLogo{
+    display: none;
+    position: absolute;
+    right:0;
+    transform: translate(-40%,0);
+}
+
+@media screen and (max-width:600px){
+    .Heading{
+        padding:1.5rem;
+    }
+     .HeaderNav{
+        display: flex;
+        background-color: #ffff;
+        box-shadow: 0 0 1rem 100vh var(--primary-AlmostBlack1);
+        flex-direction: column;
+        position:fixed;
+        padding:3.5rem 1rem;
+        width: 50%;
+        min-height: 100vh;
+        right:0;
+        top:0;
+        justify-content: flex-start;
+        transition: 1s;
+    }
+    .HeaderNav nav , .Login{
+        width: 100%;
+    }
+    .HeaderNav nav{
+        height:60vh;
+    }
+    .HeaderNav nav ol{
+        flex-direction: column;
+    }
+    .HeaderNav nav ol li{
+        padding: 0.5rem 0;
+    }
+    .HeaderNav nav ol li,  .Login button{
+        display: block;
+        align-items: center;
+        position: relative;
+        left:0;
+        margin: 0;
+    }
+    .Login button{
+        text-align: center;
+        width: 100%;
+    }
+    .MenuLogo{
+        display: block;
+        z-index: 1;
+    }
+    .HeaderNav[data-menu='0']{
+        transition: 1s;
+        transform: translate(100%,0);
+        box-shadow: 0 0 0rem 0vh var(--primary-AlmostBlack1);
+        min-width: 0;
+        width: 0;
+        
+    }
+    .HeaderNav[data-menu='0']>*{
+        transition: 1s;
+        width: 0;
+    }
+}

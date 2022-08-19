@@ -1,0 +1,40 @@
+.Drop{
+  position: relative;
+}
+.Drop span{
+  display: inline-flex;
+  gap:5px;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+}
+
+.Drop span img{
+  height:0.5rem;
+  width: 0.7rem;
+}
+
+.DropDown{
+  display: none;
+  position:absolute;
+
+  min-width: 40%;
+  flex-direction: column;
+  width: max-content;
+  background-color: #ffff;
+  box-shadow: 0px 0px 1rem 0px var(--primary-MediumGray);
+
+}
+.DropHov{
+  cursor: pointer;
+}
+.Drop:hover .DropDown {
+  display: flex;
+}
+
+@media screen and (max-width:600px){
+  .DropDown{
+    position: static;
+    box-shadow: 0px 0px 0rem 0px var(--primary-MediumGray);
+  }
+}

@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import Header from './components/header/Header.js';
+import Main from './components/main/Main.js';
 import './App.css';
 
 function App() {
+  let frontendmentorurl = "https://www.frontendmentor.io?ref=challenge";
+  let Blankurl = "#";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Main />
+      <div className="attribution" hidden={true}>
+    Challenge by <a href={frontendmentorurl}>Frontend Mentor</a>. 
+    Coded by <a href={Blankurl}>Amit Dhakal</a>.
+  </div>
+    </>
   );
 }
 
